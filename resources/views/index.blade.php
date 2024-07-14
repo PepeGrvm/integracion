@@ -4,8 +4,13 @@
 
 @section('contenido')
 <script src="{{ asset('js/filtroCurso_Clase.js') }}"></script>
+<script src="{{ asset('js/clima.js') }}"></script>
 
 @extends('layout/navbar')
+    <!-- Botón para mostrar el clima -->
+    <li>
+        <button id="clima" class="btn btn-outline-primary">Clima Santiago de Chile: </button>
+    </li>
 
 <div class="container" style="padding-top: 80px;">
     <h3 style="font-weight: bold;">Estudia con profesores de calidad</h3>
@@ -174,8 +179,25 @@
         Las clases online ofrecen una serie de ventajas significativas que hacen que la opción de "Clases Ya" sea una elección inteligente y conveniente. En primer lugar, la flexibilidad es clave. Con "Clases Ya", los estudiantes tienen la posibilidad de acceder a lecciones desde la comodidad de su hogar o cualquier lugar con conexión a internet, lo que elimina las barreras geográficas y optimiza el tiempo de aprendizaje.</p>
 </div>
 
+<hr>
+<div>
+<!-- API MAPA 
+********************************
+Esta API de Google Maps permite incrustar un mapa en una página web utilizando un iframe. 
+El mapa muestra la ubicación de la sede San Joaquín del Duoc UC en Santiago, Chile. 
 
 
+Parámetros del URL
+********************************
+width: Ancho del iframe en píxeles. En este caso, es 600.
+height: Altura del iframe en píxeles. En este caso, es 450.
+style: Estilos CSS aplicados al iframe. Aquí, border:0; elimina el borde.
+allowfullscreen: Permite que el iframe se muestre en pantalla completa.
+loading: Especifica cómo se carga el iframe. lazy indica que se carga de forma diferida.
+referrerpolicy: Política de referencia para el iframe. no-referrer-when-downgrade significa que no se enviará el encabezado Referer si la navegación es desde HTTPS a HTTP.
+-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0498282973904!2d-70.61886772500554!3d-33.50008070005431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses!2scl!4v1720975127599!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 </body>
 <script> function buscar(){
     var name = document.getElementById("buscarAsigna").value;
